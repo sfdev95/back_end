@@ -49,7 +49,7 @@ class Reserva(models.Model):
     codbarbero = models.ForeignKey(Barbero,on_delete=models.CASCADE)
     codclie = models.ForeignKey(Cliente,on_delete=models.CASCADE)
     codserv = models.ManyToManyField(Servicio)
-    fecha = models.DateField(auto_now=True)
+    fecha = models.DateField()
     obs = models.TextField()
 
     class Meta:
